@@ -4,5 +4,4 @@
     <string name="ethanol_value_hint">Digite o preço do Etanol, ex: 5,98</string>
     <string name="gas_value_hint">Digite o preço da Gasolina, ex: 7,98</string>
     <string name="button_calculate_text">Calcular</string>
-    <string name="button_calculate_text">Calcular</string>
 </resources>

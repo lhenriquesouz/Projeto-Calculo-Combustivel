@@ -52,7 +52,8 @@
             android:id="@+id/inputEditTextEthanolValueId"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/ethanol_value_hint" />
+            android:hint="@string/ethanol_value_hint"
+            android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +72,8 @@
             android:id="@+id/inputEditTextGasValueId"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/gas_value_hint" />
+            android:hint="@string/gas_value_hint"
+            android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,44 +84,45 @@
         android:layout_marginStart="@dimen/simple_margin"
         android:layout_marginTop="@dimen/simple_margin"
         android:layout_marginEnd="@dimen/simple_margin"
+        android:onClick="buttonCalculateClick"
         android:text="@string/button_calculate_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageViewResult"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="@dimen/simple_margin"
         android:layout_marginTop="@dimen/triple_margin"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTip"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateId"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateId" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewResult"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewShare"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewResult"
+        app:layout_constraintTop_toTopOf="@+id/imageViewResult" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/simple_margin"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        tools:srcCompat="@drawable/ic_share" />
+        app:layout_constraintStart_toEndOf="@+id/textViewTip"
+        app:layout_constraintTop_toTopOf="@+id/textViewTip"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
